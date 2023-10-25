@@ -7,7 +7,7 @@ import analog from '@analogjs/platform';
 export default defineConfig(({ mode }) => ({
   publicDir: 'src/assets',
   build: {
-    target: ['es2020'],
+    target: ['esnext'],
   },
   resolve: {
     mainFields: ['module'],
