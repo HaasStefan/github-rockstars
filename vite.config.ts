@@ -17,9 +17,13 @@ export default defineConfig(({ mode }) => ({
       routes: ['/', '/home']
     },
     nitro: {
+      externals: {
+        external: [],
+      },
+      preset: 'netlify',
       output: {
-        dir: './dist/analog',
         serverDir: '{{ rootDir }}/.netlify/functions-internal',
+        publicDir: '../../dist/analog/public',
       },
     }
   })],
