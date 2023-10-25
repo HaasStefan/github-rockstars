@@ -15,6 +15,12 @@ export default defineConfig(({ mode }) => ({
   plugins: [analog({
     prerender: {
       routes: ['/', '/home']
+    },
+    nitro: {
+      output: {
+        dir: './dist/analog',
+        serverDir: '{{ rootDir }}/.netlify/functions-internal',
+      },
     }
   })],
   test: {
